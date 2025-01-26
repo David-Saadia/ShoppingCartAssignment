@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Login_Mockup</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_login_fragment">Hello Login Screen</string>
+    <string name="register_screen_title">Sign Up</string>
+    <string name="login_screen_title">Login</string>
+    <string name="email_field_hint">Enter email..</string>
+    <string name="password_field_hint">Enter password..</string>
+    <string name="password_auth_field_hint">Enter your password again..</string>
+    <string name="phone_field_hint">(+972)5X-XXXXXXX</string>
+    <string name="login_submit_btn">login</string>
+    <string name="register_btn">Register</string>
+    <string name="check_box_txt">Receive Malware?</string>
+    <string name="product_image">The image of the product</string>
+</resources>
