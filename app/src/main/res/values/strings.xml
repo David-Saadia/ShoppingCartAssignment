@@ -12,4 +12,5 @@
     <string name="register_btn">Register</string>
     <string name="check_box_txt">Receive Malware?</string>
     <string name="product_image">The image of the product</string>
+    <string name="home_user_greeting">Hello, %s</string>
 </resources>

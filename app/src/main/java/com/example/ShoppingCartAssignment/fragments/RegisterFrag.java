@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ShoppingCartAssignment.R;
+import com.example.ShoppingCartAssignment.activities.MainActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
@@ -139,6 +140,16 @@ public class RegisterFrag extends Fragment {
                 }
             }
         });
+
+        //Toggle password visibility
+        Button togglePasswordBtn = view.findViewById(R.id.register_showPasswordBtn);
+        Button togglePasswordAuthBtn = view.findViewById(R.id.register_showPasswordAuthBtn);
+        MainActivity mainRef = (MainActivity) getActivity();
+
+        togglePasswordBtn.setOnClickListener(v -> mainRef.togglePassword(view.findViewById(R.id.register_passwordField)) );
+        togglePasswordAuthBtn.setOnClickListener(v -> mainRef.togglePassword(view.findViewById(R.id.register_passwordAuthField)) );
+
+
         return view;
     }
 }

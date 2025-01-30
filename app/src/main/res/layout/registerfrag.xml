@@ -28,6 +28,7 @@
         android:textStyle="bold"
         />
 
+
     <EditText
         android:id="@+id/register_emailAddressField"
         android:layout_height="50dp"
@@ -41,37 +42,65 @@
         android:layout_marginTop="2dp"
         android:layout_gravity="center_horizontal"
         android:autofillHints="emailAddress"
+        android:maxLength="30"
         />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/register_passwordField"
+            android:layout_height="50dp"
+            android:layout_width="350dp"
+            android:hint="@string/password_field_hint"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/text_input_hint"
+            android:background="@drawable/input_box_design"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center_horizontal"
+            android:autofillHints="password"
+            android:maxLength="30"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/register_showPasswordBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignEnd="@id/register_passwordField"
+            android:text=""
+            android:background="@android:drawable/ic_menu_view"
+            />
+    </RelativeLayout>
 
-    <EditText
-        android:id="@+id/register_passwordField"
-        android:layout_height="50dp"
-        android:layout_width="350dp"
-        android:hint="@string/password_field_hint"
-        android:inputType="textPassword"
-        android:padding="12dp"
-        android:textColor="#FFFFFF"
-        android:textColorHint="@color/text_input_hint"
-        android:background="@drawable/input_box_design"
-        android:layout_marginTop="2dp"
-        android:layout_gravity="center_horizontal"
-        android:autofillHints="password"
-        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/register_passwordAuthField"
+            android:layout_height="50dp"
+            android:layout_width="350dp"
+            android:hint="@string/password_auth_field_hint"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="@color/text_input_hint"
+            android:background="@drawable/input_box_design"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center_horizontal"
+            android:autofillHints="password"
+            android:maxLength="30"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/register_showPasswordAuthBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignEnd="@id/register_passwordAuthField"
+            android:text=""
+            android:background="@android:drawable/ic_menu_view"
+            />
 
-    <EditText
-        android:id="@+id/register_passwordAuthField"
-        android:layout_height="50dp"
-        android:layout_width="350dp"
-        android:hint="@string/password_auth_field_hint"
-        android:inputType="textPassword"
-        android:padding="12dp"
-        android:textColor="#FFFFFF"
-        android:textColorHint="@color/text_input_hint"
-        android:background="@drawable/input_box_design"
-        android:layout_marginTop="2dp"
-        android:layout_gravity="center_horizontal"
-        android:autofillHints="password"
-        />
+
+    </RelativeLayout>
 
 
 

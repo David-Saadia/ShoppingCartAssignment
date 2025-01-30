@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.ShoppingCartAssignment.R;
+import com.example.ShoppingCartAssignment.activities.MainActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -77,12 +78,12 @@ public class LoginFrag extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.loginfrag, container, false);
         Button registerBtn=view.findViewById(R.id.login_register_btn);
-        registerBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(view).navigate(R.id.action_loginfrag_to_registerfrag);
-            }
-        });
+
+        //Register button listener
+        //Arrow Function rather than onClickListener, - IDE suggested.
+        registerBtn.setOnClickListener(v -> Navigation.findNavController(view).navigate(R.id.action_loginfrag_to_registerfrag));
+
+        //Login button listener
         Button loginBtn =view.findViewById(R.id.login_login_btn);
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,6 +113,11 @@ public class LoginFrag extends Fragment {
 
             }
         });
+        //Show password button listener
+        Button showPasswordBtn = view.findViewById(R.id.login_showPasswordBtn);
+        MainActivity mainRef = (MainActivity) getActivity();
+        showPasswordBtn.setOnClickListener(v -> mainRef.togglePassword(view.findViewById(R.id.login_passwordField)) );
+
         return view;
     }
 }
